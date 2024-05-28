@@ -17,8 +17,8 @@ body {
     top: 0%;
     left: 0%;
     width: 100%;
-    padding: 20px,10%;
-    background: transparent;
+    padding: 15px,30px;
+    background: black;
     display: flex;
     justify-content: space-between;
     z-index: 100;
@@ -26,8 +26,8 @@ body {
 }
 
 .navbar a {
-    display: inline-block;
-    font-size: 25px;
+    display: inline-flex;
+    font-size: 20px;
     color: aqua;
     text-decoration: none;
     font-weight: 500;
@@ -36,22 +36,22 @@ body {
 }
 .navbar a:hover{
     color:blue;
+    border-radius: 5px;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 3px;
 }
 
 .home{
-    position: relative;
-    width: 100%;
+    display: flex;
     justify-content: space-between;
-    height: 100vh;
     display: flex;
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 50px;
+    background-color: #f4f4f4;
 }
 .home img{
     width: 75%;
@@ -64,7 +64,7 @@ body {
     
 }
 .home-content{
-    max-width: 600px;
+    max-width: 50%;
 }
 .home-content span{
     color:rgb(137, 226, 43);
@@ -144,6 +144,10 @@ footer {
     padding: 20px 0;
 }
 
+footer a {
+    color: #007bff;
+}
+
 header h1 {
     font-size: 2em;
 }
@@ -168,7 +172,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 20px;
 }
 
@@ -291,5 +295,51 @@ h2 {
     }
     100%{
         width: 20%;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .img {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .Skills ul {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .home {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 10px;
     }
 }
